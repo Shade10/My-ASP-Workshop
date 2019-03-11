@@ -1,0 +1,25 @@
+﻿@model ASP_Workshop.Models.questionnaire
+
+@{
+    ViewBag.Title = "Home";
+}
+
+<h2>Witam na stronie sklepu internetowego - <b>Prace ciągle w budowie</b></h2>
+
+<p>prace testowe:</p>
+<p>Ankieta - </p>
+
+@using (Html.BeginForm()) {
+    <label>Pytanie 1</label>
+    <div class="form-group">@Html.TextBoxFor(x => x.QueryOne, new { @class = "form-control" })</div>
+
+    <label>Pytanie 2</label>
+    <div class="form-group">@Html.TextBoxFor(x => x.QueryTwo, new { @class = "form-control" })</div>
+
+    <label>Pytanie 1</label>
+    <div class="form-group">@Html.TextBoxFor(x => x.QueryOne, new { @class = "form-control" })</div>
+
+    <div class="text-center">
+        <input class="btn btn-primary" type="submit" value="Zakończ ankietę"/>
+    </div>
+}
